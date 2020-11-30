@@ -1,6 +1,7 @@
-.App {
+/** @format */
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +36,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#main {
+  background-image: url("./yoda.jpg");
+  background-size: 100% 100%;
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  height: 100%;
+  width: 100%;
+  /* justify-content: center;
+  align-items: center; */
+  display: flex;
+
+  /* background-color: rgb(71, 120, 26); */
+  /*  rgb(127, 131, 105);*/
+}
+
+h1 {
+  color: #fff;
 }

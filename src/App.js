@@ -1,14 +1,15 @@
 /** @format */
 
 import React, { Component, useState } from "react";
+import "./App.css";
 import axios from "axios";
 
 const styles = {
   app: {
-    margin: "10px",
+    margin: "30px 40px",
   },
   label: {
-    color: "gray",
+    color: "#fff",
     margin: "0 0 0 5px",
     fontSize: "22px",
   },
@@ -17,10 +18,11 @@ const styles = {
     width: "500px",
     margin: "5px",
     fontSize: "21px",
+   
   },
   button: {
-    backgroundColor: "#007bff",
-    borderColor: "007bff",
+    backgroundColor: "green",
+    borderColor: "green",
     color: "#fff",
     border: "1px solid transparent",
     padding: "10px 30px",
@@ -28,7 +30,7 @@ const styles = {
   },
   text: {
     margin: "0 0 0 5px",
-    color: "green",
+    color: "#fff",
     fontSize: "32px",
   },
 };
@@ -49,23 +51,25 @@ const App = () => {
   };
 
   return (
-    <div style={styles.app}>
-      <h1>Yoda Translator</h1>
-      <label style={styles.label}>English</label>
-      <br />
-      <input
-        style={styles.textInput}
-        type="text"
-        placeholder="Type your text here..."
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <button style={styles.button} onClick={handleTranslation}>
-        Translate
-      </button>
-      <br />
-      <label style={styles.label}>Yoda</label>
-      <div style={styles.text}>{yodaText}</div>
+    <div id="main">
+      <div style={styles.app}>
+        <h1>Yoda Translator</h1>
+        <label style={styles.label}>English</label>
+        <br />
+        <input
+          style={styles.textInput}
+          type="text"
+          placeholder="Type your text here..."
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <button style={styles.button} onClick={handleTranslation}>
+          Translate
+        </button>
+        <br />
+        <label style={styles.label}>Yoda</label>
+        <div style={styles.text}>{yodaText}</div>
+      </div>
     </div>
   );
 };
